@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Task Organizer</title>
+
+{% endblock %}
+
+{% block body %}
+
+{% if tasks|length < 1 %} <h2>No work? Good going!</h2>
+    <p class="tagline">Got a task? Add it below!</p>
+
+    {% else %}
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task.content }}</td>
+            <td>{{ task.date_created.date() }}</td>
+            <td>
+                <a href="/delete/{{ task.id }}" id="delete"><i class="fa fa-trash"></i> Delete </a>
+                <hr id="hr">
+                <a href="/update/{{ task.id }}" id="update"> <i class="fa fa-pencil"></i> Update </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <br>
+    <br>
+    <form action="/" method="POST">
+        <input id="content_input" type="text" name="content" id="content">
+        <input id="content_submit" type="submit" value="Add">
+    </form>
+
+
+    {% endblock %}

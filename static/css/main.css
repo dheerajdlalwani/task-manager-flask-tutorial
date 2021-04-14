@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html 
+{
+    font-size: 16px;
+}
+
+
+
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+.content
+{
+    display: grid;
+    align-items: center;
+    width: 50vw;
+}
+
+table
+{
+    table-layout: fixed;
+    width: 100%;
+    border-radius: 5px;
+    border-collapse: collapse;
+    border: solid #4169e1 4px;
+}
+
+th, td
+{
+    padding: 0.5em;
+}
+
+tr, td, th
+{
+    border: solid #4169e1 4px;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+#delete
+{
+    color: red;
+}
+
+#update
+{
+    color:#4169e1;
+}
+
+#content_input
+{
+    background-color: #0f0f0f;
+    color: #4169e1;
+    border: solid #4169e1 4px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#content_submit
+{
+    color: white;
+    background-color: #4169e1;
+    padding: 10px;
+    cursor: pointer;
+    border: solid #4169e1 4px;
+    border-radius: 5px;
+
+}
+
+#hr
+{
+    border: dashed #4169e1 2px;
+}
+
+
+@media screen and (max-width: 540px)
+{
+    .content
+    {
+        width: 90vw;
+    }    
+}
+
+
+
+
+@media screen and (min-width: 540px)
+{
+    html
+    {
+        font-size: 5px;
+    }
+}
+@media screen and (min-width: 1000px)
+{
+    html
+    {
+        font-size: 20px;
+    }
+}
